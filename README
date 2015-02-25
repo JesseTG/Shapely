@@ -1,0 +1,47 @@
+ _______  __   __  _______  _______  _______  ___      __   __
+|       ||  | |  ||   _   ||       ||       ||   |    |  | |  |
+|  _____||  |_|  ||  |_|  ||    _  ||    ___||   |    |  |_|  |
+| |_____ |       ||       ||   |_| ||   |___ |   |    |       |
+|_____  ||       ||       ||    ___||    ___||   |___ |_     _|
+ _____| ||   _   ||   _   ||   |    |   |___ |       |  |   |
+|_______||__| |__||__| |__||___|    |_______||_______|  |___|
+================================================================================
+================================================================================
+
+Created by Jesse Talavera-Greenberg
+CSE 328
+
+HOW TO COMPILE:
+You will need Qt5 and qmake.
+
+ABOUT:
+I implemented two different renderers for this assignment; ShaderRenderer
+renders a polygon the "modern" way, using shaders.  This is a reference
+implementation so I could verify the correctness of the assignment.  (Exception:
+concave polygons.  I didn't get around to decomposing those.)  Uncheck the
+"Hardware Rasterizer" box to see my software rasterization of the polygon.
+
+PART 1:
+First, click the + button on the left to add a new polygon.  Left-click a blank
+spot to add a new vertex, and drag the mouse with the left button held down to
+move it.  See the member function "MidpointRenderer::_computeLine" (in
+MidpointRenderer.cpp) for the implementation.
+
+PART 2:
+Create any complex polygon.  The outline will turn red and it will no longer be
+filled.  See the function "jtg::isSimplePolygon" in Utility.cpp for my
+implementation.
+
+PART 3:
+Scan-line rasterization is partially complete, but still buggy.  You can see my
+implementation in "MidpointRenderer::_fill" (in MidpointRenderer.cpp).
+
+PART 4:
+Left-click near an existing vertex and drag the mouse to move it.  Right-click
+near an existing vertex to delete it.
+
+PART 5:
+All of the specified rotations can be controlled towards the right of the GUI.
+
+PART 6:
+I was unable to do this in time.
